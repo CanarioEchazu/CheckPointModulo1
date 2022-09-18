@@ -19,6 +19,19 @@ function sumArray(array, n) {
   // por lo tanto también debería devolver false en este caso
 
   // Tu código aca:
+      const size = array.length;
+  
+    for (let i = 0; i < size; i++) {
+      const a = array[i];
+  
+      for (let j = 0; j < size; j++) {
+        if (i === j) continue;
+        const b = array[j];
+        if (a + b === n) return true;
+      }
+    }
+  
+    return false;
 
 
 };
